@@ -1,45 +1,44 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.nikhil.uisample.fragment_main">
+    tools:context="com.example.nikhil.uisample.BlankFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@mipmap/nikh" />
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/imag1"
+    android:src="@mipmap/nikh"/>
     <TextView
-        android:id="@+id/tv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/tv1"
         android:text="Nikhil"
         android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/tvv" />
+        android:layout_toEndOf="@+id/imag1"
+        android:layout_marginStart="25dp" />
     <TextView
-        android:id="@+id/tvv"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/tv2"
         android:text="Londhe"
-        android:layout_toEndOf="@+id/imageView2"
-        android:layout_marginStart="40dp"
-        android:layout_below="@+id/tv" />
+        android:layout_below="@+id/tv1"
+        android:layout_alignStart="@+id/tv1" />
     <TextView
-        android:id="@+id/tvv1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/tv3"
         android:text="CS 639"
         android:layout_alignParentTop="true"
-        android:layout_alignStart="@+id/tvv2" />
+        android:layout_alignStart="@+id/tv4" />
     <TextView
-        android:id="@+id/tvv2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/tv4"
         android:text="CS 648"
-        android:layout_below="@+id/tvv1"
-        android:layout_toEndOf="@+id/tvv"
-        android:layout_marginStart="95dp" />
+        android:layout_marginStart="23dp"
+        android:layout_below="@+id/tv3"
+        android:layout_toEndOf="@+id/tv2" />
 
 </RelativeLayout>
