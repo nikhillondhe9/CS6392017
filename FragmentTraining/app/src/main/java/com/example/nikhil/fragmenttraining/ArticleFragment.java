@@ -7,6 +7,14 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+/**
+ * A simple {@link Fragment} subclass.
+ * Activities that contain this fragment must implement the
+ * {@link ArticleFragment.OnFragmentInteractionListener} interface
+ * to handle interaction events.
+ * Use the {@link ArticleFragment#newInstance} factory method to
+ * create an instance of this fragment.
+ */
 public class ArticleFragment extends Fragment {
     final static String ARG_POSITION = "position";
     int mCurrentPosition = -1;
@@ -14,17 +22,15 @@ public class ArticleFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-
-        if (savedInstanceState != null){
+        if (savedInstanceState != null) {
             mCurrentPosition = savedInstanceState.getInt(ARG_POSITION);
         }
-        return inflater.inflate(R.layout.fragment_article, container, false);
+        return inflater.inflate(R.layout.article_view, container, false);
     }
 
     @Override
-    public void onStart(){
+    public void onStart() {
         super.onStart();
-
         Bundle args = getArguments();
         if (args != null) {
             updateArticleView(args.getInt(ARG_POSITION));
@@ -35,15 +41,13 @@ public class ArticleFragment extends Fragment {
 
     public void updateArticleView(int position) {
         TextView article = (TextView) getActivity().findViewById(R.id.article);
-        article.setText(InputText.Articles[position]);
+        article.setText(Ipsum.Articles[position]);
         mCurrentPosition = position;
     }
 
     @Override
     public void onSaveInstanceState(Bundle outState) {
         super.onSaveInstanceState(outState);
-
         outState.putInt(ARG_POSITION, mCurrentPosition);
     }
 }
-
