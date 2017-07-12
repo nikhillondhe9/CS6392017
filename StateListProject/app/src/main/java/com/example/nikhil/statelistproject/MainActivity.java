@@ -90,7 +90,7 @@ public class MainActivity extends AppCompatActivity {
                 }
                 if (i == 26){
 
-                    String[] State = {"32.361623", "-86.287686", "Nevada"};
+                    String[] State = {"39.162426", "-119.758846", "Nevada"};
                     Intent intent = new Intent(view.getContext(), MapsActivity.class );
                     intent.putExtra(Map_Key, State);
                     startActivity(intent);
